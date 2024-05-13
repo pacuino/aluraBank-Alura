@@ -84,13 +84,13 @@
         <form class="principal__formulario" data-formulario>
           <fieldset class="formulario__campo">
             <label class="campo__etiqueta" for="nombre">Nombre</label>
-            <input name="nombre" id="nombre" class="campo__completo" />
+            <input name="nombre" id="nombre" class="campo__completo" type="text" minlength="3" required/>
             <span class="mensaje-error"></span>
           </fieldset>
 
           <fieldset class="formulario__campo">
             <label class="campo__etiqueta" for="email">E-mail</label>
-            <input name="email" id="email" class="campo__completo" />
+            <input name="email" id="email" class="campo__completo" type="email" minlength="6" required/>
             <span class="mensaje-error"></span>
           </fieldset>
           <fieldset class="formulario__campo">
@@ -100,7 +100,7 @@
             <input
               name="identificacion"
               id="identificacion"
-              class="campo__completo campo__completo--menor"
+              class="campo__completo campo__completo--menor" type="text" minlength="8" required
             />
             <span class="mensaje-error"></span>
           </fieldset>
@@ -111,7 +111,7 @@
             <input
               name="cuil"
               id="cuil"
-              class="campo__completo campo__completo--menor"
+              class="campo__completo campo__completo--menor" type="text" minlength="10" maxlength="14" pattern="\d{2}[-\/]?\d{8}[-\/]?\d{1}" required
             />
             <span class="mensaje-error"></span>
           </fieldset>
@@ -122,12 +122,12 @@
             <input
               name="fecha_nacimiento"
               id="fecha_nacimiento"
-              class="campo__completo campo__completo--menor"
+              class="campo__completo campo__completo--menor" type="date" required
             />
             <span class="mensaje-error"></span>
           </fieldset>
           <fieldset class="formulario__terminos">
-            <input name="terminos" class="terminos__input" />
+            <input name="terminos" class="terminos__input" type="checkbox" required/>
             <p class="terminos__texto">
               He leído y conozco las condiciones para el tratamiento de mis
               datos descrito en las <a href="#">Políticas de Privacidad</a>.
@@ -140,7 +140,7 @@
               value="Siguiente"
               class="formulario__boton"
               id="enviar"
-              data-boton-enviar
+              data-boton-enviar type="submit"
             />
             <span class="mensaje-error"></span>
           </div>
@@ -204,5 +204,6 @@
         </h2>
       </section>
     </footer>
+    <script src="../js/main.js" type="module"></script>
   </body>
 </html>
