@@ -3,11 +3,13 @@ export default function esUnCuil(campo){
 
     if(tieneNumerosRepetidos(cuil)){
         console.log("Valores Repetidos");
+        campo.setCustomValidity("Valores Repetidos")
     }else{
         if(validarPrimerosNumeros(cuil) && validarDigitoVerificador(cuil)){
             console.log("Cuil Valido");
         }else{
             console.log("Cuil no valido");
+            campo.setCustomValidity("Cuil no valido");
         }
     }
 }
